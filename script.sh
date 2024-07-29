@@ -3,31 +3,25 @@
 rm -rf .repo/local_manifests/
 
 # repo init rom
-repo init --depth=1 -u https://github.com/Project-Elixir/manifest -b UNO --git-lfs
+repo init --depth=1 -u https://github.com/DroidX-UI/manifest.git -b 14_v3 --git-lfs
 echo "=================="
 echo "Repo init success"
 echo "=================="
 
 # Local manifests
-git clone https://github.com/Gtajisan/local_manifests_clo -b Project-Elixir .repo/local_manifests
+git clone https://github.com/ infiniteluck777/local_manifests_clo -b Matrixx-14 .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
 
 # build
-/opt/crave/resync.sh || . build/envsetup.sh
+/opt/crave/resync.sh 
 echo "============="
 echo "Sync success"
 echo "============="
 
-# keys
-git clone https://github.com/PhantomEnigma/build_keys.git -b blaze-keys vendor/extra
-echo "============="
-echo "Keys copied"
-echo "============="
-
 # Export
-export BUILD_USERNAME=Phantom
+export BUILD_USERNAME=infiniteluck777
 export BUILD_HOSTNAME=crave
 echo "======= Export Done ======"
 
@@ -36,11 +30,6 @@ source build/envsetup.sh
 echo "====== Envsetup Done ======="
 
 # Lunch
-lunch aosp_Mi439_4_19-ap1a-userdebug || lunch aosp_Mi439_4_19-userdebug || lunch aosp_Mi439_4_19-userdebug
-echo "============="
-# Make cleaninstall
+lunch lunch droidx_Mi439_19-ap2a-userdebug 
 make installclean
-echo "============="
-
-# Build rom
 mka bacon
