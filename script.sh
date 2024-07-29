@@ -30,6 +30,6 @@ source build/envsetup.sh
 echo "====== Envsetup Done ======="
 
 # Lunch
-lunch lunch droidx_Mi439_19-ap2a-userdebug 
+lunch droidx_Mi439_4_19-ap2a-userdebug 
 make installclean
 mka bacon
