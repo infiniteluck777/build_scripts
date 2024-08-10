@@ -9,7 +9,7 @@ echo "Repo init success"
 echo "=================="
 
 # Local manifests
-git clone https://github.com/Gtajisan/local_manifests -b a14-projectblaze .repo/local_manifests
+git clone https://github.com/Gtajisan/local_manifests -b 14/blaze .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
@@ -22,7 +22,7 @@ echo "============="
 
 
 # Export
-export BUILD_USERNAME=FARHAN•XD
+export BUILD_USERNAME=infiniteluck777
 export BUILD_HOSTNAME=crave
 echo "======= Export Done ======"
 
@@ -31,7 +31,7 @@ source build/envsetup.sh
 echo "====== Envsetup Done ======="
 
 # Lunch
-lunch blaze_Mi439_4_19-ap1a-userdebug || lunch blaze_Mi439_4_19-userdebug
+lunch blaze_Mi439_4_19-ap1a-userdebug 
 echo "============="
 # Make cleaninstall
 make installclean
