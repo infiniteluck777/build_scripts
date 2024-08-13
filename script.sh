@@ -9,7 +9,7 @@ echo "Repo init success"
 echo "=================="
 
 # Local manifests
-git clone https://github.com/infiniteluck777/local_manifests -b 14/blaze .repo/local_manifests
+git clone https://github.com/Gtajisan/local_manifests -b a14-projectblaze .repo/local_manifests
 echo "============================"
 echo "Local manifest clone success"
 echo "============================"
@@ -31,10 +31,5 @@ echo "====== Envsetup Done ======="
 
 # Lunch
 lunch blaze_Mi439_4_19-ap2a-userdebug
-echo "============="
-# Make cleaninstall
 make installclean
-echo "============="
-
-# Build rom
 mka bacon
